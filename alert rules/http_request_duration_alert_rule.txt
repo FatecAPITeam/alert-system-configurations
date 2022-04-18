@@ -1,0 +1,65 @@
+{
+  "firing": false,
+  "state": "ok",
+  "conditionEvals": "false = false",
+  "timeMs": "1.623ms",
+  "logs": [
+    {
+      "message": "Condition[0]: Query",
+      "data": {
+        "from": 1650245803414,
+        "queries": [
+          {
+            "refId": "A",
+            "model": {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "FHciCx87z"
+              },
+              "exemplar": true,
+              "expr": "sum(rate(http_server_requests_seconds_sum{instance=\"resuolve-backend.herokuapp.com:80\", job=\"spring_actuator\", status!~\"5..\"}[1m]))/sum(rate(http_server_requests_seconds_count{instance=\"resuolve-backend.herokuapp.com:80\", job=\"spring_actuator\", status!~\"5..\"}[1m]))",
+              "format": "time_series",
+              "hide": false,
+              "interval": "",
+              "intervalFactor": 1,
+              "legendFormat": "HTTP - AVG",
+              "refId": "A"
+            },
+            "datasource": {
+              "id": 1,
+              "name": "Prometheus"
+            },
+            "maxDataPoints": 1500,
+            "intervalMs": 10
+          }
+        ],
+        "to": 1650245813414
+      }
+    },
+    {
+      "message": "Condition[0]: Query Result",
+      "data": {
+        "fromDataframe": true,
+        "series": [
+          {
+            "name": "HTTP - AVG",
+            "points": [
+              [
+                0.0021303558636363625,
+                1650245790000
+              ],
+              [
+                0.0020335073181817587,
+                1650245805000
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "message": "Condition[0]: Eval: false, Metric: HTTP - AVG, Value: 0.002",
+      "data": null
+    }
+  ]
+}

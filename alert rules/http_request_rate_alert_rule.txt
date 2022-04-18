@@ -1,0 +1,76 @@
+{
+  "firing": false,
+  "state": "ok",
+  "conditionEvals": "false = false",
+  "timeMs": "1.659ms",
+  "logs": [
+    {
+      "message": "Condition[0]: Query",
+      "data": {
+        "from": 1650245642742,
+        "queries": [
+          {
+            "refId": "A",
+            "model": {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "FHciCx87z"
+              },
+              "exemplar": true,
+              "expr": "sum(rate(http_server_requests_seconds_count{instance=\"resuolve-backend.herokuapp.com:80\", job=\"spring_actuator\"}[1m]))",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 1,
+              "legendFormat": "HTTP",
+              "refId": "A"
+            },
+            "datasource": {
+              "id": 1,
+              "name": "Prometheus"
+            },
+            "maxDataPoints": 1500,
+            "intervalMs": 50
+          }
+        ],
+        "to": 1650245702742
+      }
+    },
+    {
+      "message": "Condition[0]: Query Result",
+      "data": {
+        "fromDataframe": true,
+        "series": [
+          {
+            "name": "HTTP",
+            "points": [
+              [
+                0.39996363966912096,
+                1650245640000
+              ],
+              [
+                0.4000072728595066,
+                1650245655000
+              ],
+              [
+                0.39994182664339734,
+                1650245670000
+              ],
+              [
+                0.40002181937196574,
+                1650245685000
+              ],
+              [
+                0.4,
+                1650245700000
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "message": "Condition[0]: Eval: false, Metric: HTTP, Value: 0.400",
+      "data": null
+    }
+  ]
+}

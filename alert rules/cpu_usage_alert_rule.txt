@@ -1,0 +1,84 @@
+{
+  "firing": false,
+  "state": "ok",
+  "conditionEvals": "false = false",
+  "timeMs": "1.599ms",
+  "logs": [
+    {
+      "message": "Condition[0]: Query",
+      "data": {
+        "from": 1650245816430,
+        "queries": [
+          {
+            "refId": "A",
+            "model": {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "FHciCx87z"
+              },
+              "exemplar": false,
+              "expr": "system_cpu_usage{instance=\"resuolve-backend.herokuapp.com:80\", job=\"spring_actuator\"}",
+              "format": "time_series",
+              "hide": false,
+              "interval": "",
+              "intervalFactor": 1,
+              "legendFormat": "system",
+              "metric": "",
+              "refId": "A",
+              "step": 2400
+            },
+            "datasource": {
+              "id": 1,
+              "name": "Prometheus"
+            },
+            "maxDataPoints": 1500,
+            "intervalMs": 50
+          }
+        ],
+        "to": 1650245876430
+      }
+    },
+    {
+      "message": "Condition[0]: Query Result",
+      "data": {
+        "fromDataframe": true,
+        "series": [
+          {
+            "name": "system",
+            "points": [
+              [
+                0.5521844660194175,
+                1650245805000
+              ],
+              [
+                0.48940036341611143,
+                1650245820000
+              ],
+              [
+                0.6844014510278114,
+                1650245835000
+              ],
+              [
+                0.5350823672971324,
+                1650245850000
+              ],
+              [
+                0.7952322738386308,
+                1650245865000
+              ]
+            ],
+            "tags": {
+              "__name__": "system_cpu_usage",
+              "instance": "resuolve-backend.herokuapp.com:80",
+              "job": "spring_actuator"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "message": "Condition[0]: Eval: false, Metric: system, Value: 0.611",
+      "data": null
+    }
+  ]
+}
